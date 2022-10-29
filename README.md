@@ -22,10 +22,10 @@ cd Xcode-File-Teplates
 The file templates will be installed under 
 
 ```bash
-~/Library/Developer/Xcode/Templates/File Templates/Multiplatform/Swift/
+~/Library/Developer/Xcode/Templates/File Templates/Multiplatform/Custom/
 ```
 
-Regarding this last path component `Swift/` you'll find it in Xcode under the related category `Swift`.
+Regarding this last path component `Custom/` you'll find it in Xcode under the related category `Custom`. However, this is a default value. Running the install script you will be prompted to give a name for that category.
 
 ## Customization
 

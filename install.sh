@@ -1,13 +1,4 @@
-#!/usr/bin/env sh
-
-# ========================================
-# Configuration
-# ========================================
-
-PWD=$(pwd)
-TEMPLATES_DIR="${HOME}/Library/Developer/Xcode/Templates/File Templates/Multiplatform/Swift"
-DOWNLOAD_DIR="${HOME}/.woodbytes"
-
+#!/bin/bash
 
 # ========================================
 # ANSI Color escape codes:
@@ -41,6 +32,31 @@ LCYAN='\033[1;36m'
 WHITE='\033[1;37m'
 
 NC='\033[0m' # No Color
+
+
+# ========================================
+# User Input
+# ========================================
+
+DEFAULT_CATEGORY="Custom"
+
+echo "All Xcode file templates are located under a specific category. The default category for these"
+echo "templates is '${DEFAULT_CATEGORY}'. If you like another name, just use the input below."
+echo
+printf "Name the ${ORANGE}Xcode category${NC} for your templates (Default: ${DEFAULT_CATEGORY}): "
+read CATEGORY
+if [ "x$CATEGORY" = "x" ]; then
+	CATEGORY=${DEFAULT_CATEGORY}
+fi
+
+
+# ========================================
+# Configuration
+# ========================================
+
+PWD=$(pwd)
+TEMPLATES_DIR="${HOME}/Library/Developer/Xcode/Templates/File Templates/Multiplatform/${CATEGORY}"
+DOWNLOAD_DIR="${HOME}/.woodbytes"
 
 
 # ========================================
