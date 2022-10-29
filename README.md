@@ -80,3 +80,6 @@ To let Xcode use this `plist` we have to move it to a location where Xcode can f
 `~/Library/Developer/Xcode/UserData/IDETemplateMacros.plist`
 
 You can also have a look into Xcode Help section [`Customize text macros`](https://help.apple.com/xcode/mac/11.4/index.html?localePath=en.lproj#/dev91a7a31fc).
+
+## License
+This software is published under the [MIT License](http://woodbytes.mit-license.org).
