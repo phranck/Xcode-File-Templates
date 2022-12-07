@@ -40,6 +40,7 @@ NC='\033[0m' # No Color
 
 DEFAULT_CATEGORY="Custom"
 
+echo
 echo "All Xcode file templates are located under a specific category. The default category for these"
 echo "templates is '${DEFAULT_CATEGORY}'. If you like another name, just use the input below."
 echo
@@ -55,7 +56,9 @@ fi
 # ========================================
 
 PWD=$(pwd)
-TEMPLATES_DIR="${HOME}/Library/Developer/Xcode/Templates/File Templates/Multiplatform/${CATEGORY}"
+TEMPLATES_BASE_DIR="${HOME}/Library/Developer/Xcode/Templates/File Templates"
+TEMPLATES_OLD_DIR="${TEMPLATES_BASE_DIR}/Custom"
+TEMPLATES_DIR="${TEMPLATES_BASE_DIR}/${CATEGORY}"
 DOWNLOAD_DIR="${HOME}/.woodbytes"
 
 
@@ -63,12 +66,19 @@ DOWNLOAD_DIR="${HOME}/.woodbytes"
 # Here we go...
 # ========================================
 
-echo -e "${YELLOW}Installing templates to '${TEMPLATES_DIR}'${NC}"
+echo -e "${YELLOW}Installing templates in '${TEMPLATES_DIR}'${NC}"
 
 printf "%-30s" "Downloading templates..."
 mkdir -p "${DOWNLOAD_DIR}"
-git clone https://github.com/phranck/Xcode-File-Teplates.git "${DOWNLOAD_DIR}" >/dev/null 2>&1
+git clone https://github.com/phranck/Xcode-File-Templates.git "${DOWNLOAD_DIR}" >/dev/null 2>&1
 printf "${GREEN}[done]${NC}\n"
+
+# Eventually remove old custom templates
+if [ -d "$TEMPLATES_OLD_DIR" ]; then
+	printf "%-30s" "Removing old templates..."
+    rm -rf "${TEMPLATES_OLD_DIR}"
+	printf "${GREEN}[done]${NC}\n"
+fi
 
 printf "%-30s" "Installing templates..."
 mkdir -p "${TEMPLATES_DIR}"
