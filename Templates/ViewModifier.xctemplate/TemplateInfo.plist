@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SupportsSwiftPackage</key>
+	<true/>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>Description</key>
+	<string>Chose one of the following file types: Extension, Struct, SwiftUI View and ViewModifier.</string>
+	<key>Summary</key>
+	<string>A selection of Swift files</string>
+	<key>SortOrder</key>
+	<string>1</string>
+	<key>AllowedTypes</key>
+	<array>
+		<string>public.swift-source</string>
+	</array>
+	<key>Platforms</key>
+	<array />
+	<key>DefaultCompletionName</key>
+	<string>File</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>modifierName</string>
+			<key>Name</key>
+			<string>.modifierName:</string>
+			<key>Description</key>
+			<string>The name of the modifier which is used in you Swift code (dot prefixed)</string>
+			<key>Default</key>
+			<string></string>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>fileType</key>
+				<array>
+					<string>ViewModifier</string>
+				</array>
+			</dict>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>viewModifierName</string>
+			<key>Name</key>
+			<string>ViewModifierName:</string>
+			<key>Description</key>
+			<string>Your custom name which extends the ViewModifier</string>
+			<key>Default</key>
+			<string></string>
+			<key>RequiredOptions</key>
+			<dict>
+				<key>fileType</key>
+				<array>
+					<string>ViewModifier</string>
+				</array>
+			</dict>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>text</string>
+			<key>NotPersisted</key>
+			<true/>
+		</dict>
+	</array>
+</dict>
+</plist>
