@@ -57,7 +57,6 @@ fi
 
 PWD=$(pwd)
 TEMPLATES_BASE_DIR="${HOME}/Library/Developer/Xcode/Templates/File Templates"
-TEMPLATES_OLD_DIR="${TEMPLATES_BASE_DIR}/${DEFAULT_CATEGORY}"
 TEMPLATES_DIR="${TEMPLATES_BASE_DIR}/${CATEGORY}"
 DOWNLOAD_DIR="${HOME}/.woodbytes"
 
@@ -72,13 +71,6 @@ printf "%-30s" "Downloading templates..."
 mkdir -p "${DOWNLOAD_DIR}"
 git clone https://github.com/phranck/Xcode-File-Templates.git "${DOWNLOAD_DIR}" >/dev/null 2>&1
 printf "${GREEN}[done]${NC}\n"
-
-# Eventually remove old custom templates
-if [ -d "$TEMPLATES_OLD_DIR" ]; then
-	printf "%-30s" "Removing old templates..."
-    rm -rf "${TEMPLATES_OLD_DIR}"
-	printf "${GREEN}[done]${NC}\n"
-fi
 
 printf "%-30s" "Installing templates..."
 mkdir -p "${TEMPLATES_DIR}"
