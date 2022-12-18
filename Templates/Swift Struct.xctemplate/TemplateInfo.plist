@@ -20,9 +20,6 @@
     <array />
 	<key>DefaultCompletionName</key>
 	<string>Struct</string>
-	<key>MainTemplateFile</key>
-	<string>___FILEBASENAME___.swift</string>
-
     <key>Options</key>
     <array>
       <dict>
