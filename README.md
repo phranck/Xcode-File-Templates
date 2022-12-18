@@ -1,6 +1,4 @@
-# Cadrage Xcode File-Templates
-
-These Xcode file templates are special templates for Cadrage GmbH, made just for convenience.
+# Xcode File-Templates
 
 The installation includes the following templates:
 
