@@ -10,7 +10,7 @@ The installation includes the following templates:
 * SwiftUI View
 * ViewModifier
 
-![Xcode File Templates](img/file-templates.jpg)
+![Xcode File Templates](img/file-templates.png)
 
 ## Installation
 
